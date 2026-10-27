@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks and Grade Calculator</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.10);
+        }
+        h1 { font-size: 24px; color: #1d4ed8; text-align: center; margin-top: 0; }
+        p { text-align: center; color: #555; }
+        label { display: block; font-weight: bold; margin: 14px 0 6px; }
+        input {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 12px;
+            border: 0;
+            border-radius: 7px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover { background: #1d4ed8; }
+        .note { font-size: 13px; color: #666; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Student Marks Calculator</h1>
+    <p>Enter your name and marks for three subjects.</p>
+
+    <form action="calculate" method="post">
+        <label for="name">Student Name</label>
+        <input id="name" type="text" name="name" maxlength="100" required>
+
+        <label for="mark1">Subject 1 Marks</label>
+        <input id="mark1" type="number" name="mark1" min="0" max="100" step="1" required>
+
+        <label for="mark2">Subject 2 Marks</label>
+        <input id="mark2" type="number" name="mark2" min="0" max="100" step="1" required>
+
+        <label for="mark3">Subject 3 Marks</label>
+        <input id="mark3" type="number" name="mark3" min="0" max="100" step="1" required>
+
+        <p class="note">Each subject mark must be between 0 and 100.</p>
+        <button type="submit">Calculate Result</button>
+    </form>
+</div>
+</body>
+</html>
